@@ -27,7 +27,9 @@ class gameActivity : AppCompatActivity() {
                     , R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1)
             val currentImage = getImage(cards)
             val name = getCorrectName(currentImage)
-
+            //todo get user input
+            //todo check if valid
+            //todo if not valid tell user
         }
 
         quitBtn.setOnClickListener {
