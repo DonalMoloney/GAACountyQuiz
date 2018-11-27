@@ -66,6 +66,12 @@ class gameActivity : AppCompatActivity() {
         Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
         Toast.makeText(this, "+1", Toast.LENGTH_SHORT).show()
         //todo increment up 1
+        val temp = score.text
+        val tempNumerator = temp[0].toInt() + 1
+        val tempDenominator = temp[2].toInt() + 1
+        val newScore = "$tempNumerator / $tempDenominator"
+        score.text = newScore
+
     }
 
     private fun checkValid(name: String, userInput: String): Any {
