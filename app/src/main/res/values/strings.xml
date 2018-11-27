@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GAACountyQuiz</string>
+    <string name="title_activity_incorrect_answer">incorrectAnswerActivity</string>
 </resources>
