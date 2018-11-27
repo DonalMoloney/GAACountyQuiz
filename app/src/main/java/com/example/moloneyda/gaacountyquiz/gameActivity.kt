@@ -57,7 +57,7 @@ class gameActivity : AppCompatActivity() {
 
     private fun handleError(name: String, userInput: String) {
         val intent = Intent(this, incorrectActivity::class.java)
-        intent.putExtra(name,userInput)
+        intent.putExtra(name, userInput)
         startActivity(intent)
     }
 
@@ -87,9 +87,11 @@ class gameActivity : AppCompatActivity() {
     }
 
     private fun getImage(cards: Array<Int>): Int {
-        val indexDouble = Math.random()
-        val indexInt = (indexDouble * 10).toInt()
-        return cards[indexInt]
+//        val indexDouble = Math.random()
+//        val indexInt = (indexDouble * 10).toInt()
+//        return cards[indexInt]
+        return cards[0]
+
     }
 
     /**
@@ -97,106 +99,107 @@ class gameActivity : AppCompatActivity() {
      * Todo method still needs to be implemented
      */
     private fun getCorrectName(image: Any): String {
-        val imageName = image.toString()
-        if (imageName.equals("p1.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p1.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p2.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p3.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p4.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p5.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p6.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p7.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p8.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p9.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p10.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p11.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p12.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p13.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p14.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p15.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p16.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p17.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p18.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p19.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p20.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p21.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p22.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p23.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p24.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p25.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p26.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p27.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p28.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p29.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p30.jpg")) {
-            return ""
-
-        } else if (imageName.equals("p31.jpg")) {
-            return ""
-
-        } else {
-            return ""
-        }
+        return "Roscommon"
+//        val imageName = image.toString()
+//        if (imageName.equals("p1.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p1.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p2.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p3.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p4.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p5.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p6.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p7.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p8.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p9.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p10.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p11.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p12.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p13.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p14.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p15.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p16.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p17.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p18.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p19.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p20.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p21.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p22.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p23.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p24.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p25.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p26.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p27.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p28.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p29.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p30.jpg")) {
+//            return ""
+//
+//        } else if (imageName.equals("p31.jpg")) {
+//            return ""
+//
+//        } else {
+//            return ""
+//        }
     }
 
 
