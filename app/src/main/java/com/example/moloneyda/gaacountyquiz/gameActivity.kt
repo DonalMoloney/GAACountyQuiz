@@ -25,15 +25,9 @@ class gameActivity : AppCompatActivity() {
                     R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1,
                     R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1
                     , R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1)
-            val currentImage = getImage()
+            val currentImage = getImage(cards)
             val name = getCorrectName(currentImage)
-            //imageView.
 
-
-            //todo select an image
-            //todo set the image
-
-            //say ready for input
         }
 
         quitBtn.setOnClickListener {
@@ -46,6 +40,12 @@ class gameActivity : AppCompatActivity() {
 
         //Display toast telling the user you are ready
         Toast.makeText(this, "Get Ready to play", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun getImage(cards: Array<Int>): Int {
+        val indexDouble = Math.random()
+        val indexInt = (indexDouble*10).toInt()
+        return cards[indexInt]
     }
 
     /**
@@ -155,8 +155,5 @@ class gameActivity : AppCompatActivity() {
         }
     }
 
-    private fun getImage(): Any {
-
-    }
 
 }
