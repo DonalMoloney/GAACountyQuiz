@@ -21,7 +21,9 @@
         <activity
             android:name=".incorrectAnswerActivity"
             android:label="@string/title_activity_incorrect_answer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".correctActivity" />
+        <activity android:name=".incorrectActivity"></activity>
     </application>
 
 </manifest>
