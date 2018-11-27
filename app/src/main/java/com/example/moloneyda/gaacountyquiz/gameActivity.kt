@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_game.*
+import java.util.*
 
 class gameActivity : AppCompatActivity() {
 
@@ -27,6 +28,9 @@ class gameActivity : AppCompatActivity() {
                     , R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1, R.drawable.p1)
             val currentImage = getImage(cards)
             val name = getCorrectName(currentImage)
+
+            //todo set image
+            val userInput = getUserInput()
             //todo get user input
             //todo check if valid
             //todo if not valid tell user
@@ -46,9 +50,15 @@ class gameActivity : AppCompatActivity() {
         Toast.makeText(this, "Get Ready to play", Toast.LENGTH_SHORT).show()
     }
 
+    private fun getUserInput(): Any {
+        var temp = editText.text.toString()
+        println(temp)
+        return temp
+    }
+
     private fun getImage(cards: Array<Int>): Int {
         val indexDouble = Math.random()
-        val indexInt = (indexDouble*10).toInt()
+        val indexInt = (indexDouble * 10).toInt()
         return cards[indexInt]
     }
 
