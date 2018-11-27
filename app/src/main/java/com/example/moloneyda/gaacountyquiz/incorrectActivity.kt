@@ -18,6 +18,7 @@ class incorrectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_incorrect)
         //setting up the okay buton handler to go back to the gameActivity when clicking okay
         val btnOkay = findViewById<Button>(R.id.btnOkayIncorrect)
+        //todo also somewhere set the correct poctre
 
 
         //Showing he user what he got wrong
