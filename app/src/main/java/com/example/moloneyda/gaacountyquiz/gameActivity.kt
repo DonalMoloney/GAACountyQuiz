@@ -30,6 +30,8 @@ class gameActivity : AppCompatActivity() {
             //todo get user input
             //todo check if valid
             //todo if not valid tell user
+
+            //Todo add correct gameActivity or incorrectActivity
         }
 
         quitBtn.setOnClickListener {
