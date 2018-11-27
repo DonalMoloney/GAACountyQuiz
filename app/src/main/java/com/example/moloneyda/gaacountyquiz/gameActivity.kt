@@ -1,5 +1,6 @@
 package com.example.moloneyda.gaacountyquiz
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,13 +10,13 @@ import kotlinx.android.synthetic.main.activity_game.*
 import java.util.*
 
 class gameActivity : AppCompatActivity() {
-
+    var score = findViewById<TextView>(R.id.scoreViewA2)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
         val enterBtn = findViewById<Button>(R.id.enterBtnA2)
-        val score = findViewById<TextView>(R.id.scoreViewA2)
+        score
         val quitBtn = findViewById<Button>(R.id.btnQuitA2)
         imageViewGameA2.setImageResource(R.drawable.home)
         enterBtn.setOnClickListener {
@@ -31,8 +32,12 @@ class gameActivity : AppCompatActivity() {
 
             //todo set image
             val userInput = getUserInput()
-            //todo get user input
-            //todo check if valid
+            val isValid = checkValid(name, userInput as String)
+            if (isValid == true) {
+                handleSuccess()
+            } else {
+                handleError(name, userInput)
+            }
             //todo if not valid tell user
 
             //Todo add correct gameActivity or incorrectActivity
@@ -48,6 +53,25 @@ class gameActivity : AppCompatActivity() {
 
         //Display toast telling the user you are ready
         Toast.makeText(this, "Get Ready to play", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun handleError(name: String, userInput: String) {
+        val intent = Intent(this, incorrectActivity::class.java)
+        intent.putExtra(name,userInput)
+        startActivity(intent)
+    }
+
+
+    private fun handleSuccess() {
+        Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "+1", Toast.LENGTH_SHORT).show()
+        //todo increment up 1
+    }
+
+    private fun checkValid(name: String, userInput: String): Any {
+        println(name)
+        println(userInput)
+        return name.equals(userInput)
     }
 
     private fun getUserInput(): Any {
