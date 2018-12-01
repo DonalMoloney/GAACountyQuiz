@@ -19,18 +19,16 @@ class incorrectActivity : AppCompatActivity() {
         //setting up the okay buton handler to go back to the gameActivity when clicking okay
         val btnOkay = findViewById<Button>(R.id.btnOkayIncorrect)
         //todo also somewhere set the correct poctre
-
-
         //Showing he user what he got wrong
-        val correctValue = getIntent().getStringExtra("").toString()
-        val userInput = getIntent().getStringExtra("").toString()
+        val correctValue = getIntent().getStringExtra("CorrectAnswer").toString()
+        val userInput = getIntent().getStringExtra("InvalidValue").toString()
+        val imagePicture = getIntent().getIntExtra("CorrectPicture", -1 ).toString()
+        imageViewIncorrect.setImageResource(imagePicture.toInt())
         textViewMessageIncorrect.text = "You entered $userInput ,however the correct answer is $correctValue"
-
         //Button handler for activity_incorrect to go mack to activity_game
         btnOkay.setOnClickListener {
             val intent = Intent(this, gameActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
