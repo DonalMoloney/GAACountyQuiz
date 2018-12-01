@@ -1,3 +1,10 @@
+/*
+*Donal Moloney
+* Gaa County Quizer
+* gameActivity.kt
+*
+* 11/27/18
+*/
 package com.example.moloneyda.gaacountyquiz
 
 import android.content.Intent
@@ -10,6 +17,9 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_game.*
 import java.util.*
 
+/*
+*This class is where most of the game occurs
+*/
 class gameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

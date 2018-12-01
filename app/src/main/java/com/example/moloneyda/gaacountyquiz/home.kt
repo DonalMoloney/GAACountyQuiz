@@ -1,9 +1,19 @@
+/*
+*Donal Moloney
+* Gaa County Quizer
+* 11/27/18
+*/
+
 package com.example.moloneyda.gaacountyquiz
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+
+/*
+* This page is the home screen and allows the to user to either play the game or exit it
+*/
 
 class home : AppCompatActivity() {
 

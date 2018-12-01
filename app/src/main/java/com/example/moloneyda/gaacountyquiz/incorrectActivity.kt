@@ -1,6 +1,7 @@
 /*
 *Donal Moloney
 * Gaa County Quizer
+* incorrectActivity.kt
 * 11/27/18
 */
 package com.example.moloneyda.gaacountyquiz
@@ -11,6 +12,9 @@ import android.os.Bundle
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_incorrect.*
 
+/*
+* This page shows the incorrect answer and the correct answer when the answer inputted is incorrect
+*/
 class incorrectActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
