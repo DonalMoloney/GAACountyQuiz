@@ -17,7 +17,13 @@ class gameActivity : AppCompatActivity() {
         var score = findViewById<TextView>(R.id.scoreViewA2)
         val enterBtn = findViewById<Button>(R.id.enterBtnA2)
         val quitBtn = findViewById<Button>(R.id.btnQuitA2)
-        val cards = arrayOf(R.drawable.kerry)
+        val cards = arrayOf(R.drawable.Donegal,R.drawable.Tipperary,R.drawable.antrim,R.drawable.armagh,
+                R.drawable.carlow,R.drawable.cavan,R.drawable.clare,R.drawable.cork,R.drawable.derry,
+                R.drawable.down,R.drawable.dublin,R.drawable.fermanagh,R.drawable.galway,R.drawable.kerry,
+                R.drawable.kildare,R.drawable.kilkenny,R.drawable.laois,R.drawable.leitrim,R.drawable.limrick,
+                R.drawable.longford,R.drawable.louth,R.drawable.mayo,R.drawable.meath,R.drawable.monaghan,
+                R.drawable.sligo,R.drawable.tyrone,R.drawable.waterford,R.drawable.westmeath,R.drawable.wexford,
+                R.drawable.wicklow)
         var imageInt = getImage(cards)
         imageViewGameA2.setImageResource(imageInt)
         enterBtn.setOnClickListener {
