@@ -27,7 +27,7 @@ class gameActivity : AppCompatActivity() {
         var score = findViewById<TextView>(R.id.scoreViewA2)
         val enterBtn = findViewById<Button>(R.id.enterBtnA2)
         val quitBtn = findViewById<Button>(R.id.btnQuitA2)
-        val cards = arrayOf(R.drawable.Donegal,R.drawable.Tipperary,R.drawable.antrim,R.drawable.armagh,
+        val cards = arrayOf(R.drawable.donegal,R.drawable.tipperary,R.drawable.antrim,R.drawable.armagh,
                 R.drawable.carlow,R.drawable.cavan,R.drawable.clare,R.drawable.cork,R.drawable.derry,
                 R.drawable.down,R.drawable.dublin,R.drawable.fermanagh,R.drawable.galway,R.drawable.kerry,
                 R.drawable.kildare,R.drawable.kilkenny,R.drawable.laois,R.drawable.leitrim,R.drawable.limrick,
@@ -67,7 +67,7 @@ class gameActivity : AppCompatActivity() {
         val temp = (score.text).split("/")
         val tempNumerator = temp[0].toInt()
         val tempDenominator = temp[1].toInt() + 1
-        val newScore = "$tempNumerator / $tempDenominator"
+        val newScore = "$tempNumerator/$tempDenominator"
         score.text = newScore
         val intent = Intent(this, incorrectActivity::class.java)
         intent.putExtra("CorrectAnswer", correctName)
@@ -84,7 +84,7 @@ class gameActivity : AppCompatActivity() {
         //todo remove white space for both things
         val tempNumerator = temp[0].toInt() + 1
         val tempDenominator = temp[1].toInt() + 1
-        val newScore = "$tempNumerator / $tempDenominator"
+        val newScore = "$tempNumerator/$tempDenominator"
         score.text = newScore
     }
 
