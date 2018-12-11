@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moloneyda.gaacountyquiz">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +25,7 @@
             android:label="@string/title_activity_incorrect_answer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".correctActivity" />
-        <activity android:name=".incorrectActivity"></activity>
+        <activity android:name=".incorrectActivity" />
     </application>
 
 </manifest>
